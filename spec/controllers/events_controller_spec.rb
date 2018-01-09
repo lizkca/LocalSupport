@@ -26,5 +26,9 @@ describe EventsController, type: :controller do
     end
 
   end
-
+  
+  describe "#search" do  
+    it "should call the model method that performs Event search"
+    it "should render the search results"
+  end
 end

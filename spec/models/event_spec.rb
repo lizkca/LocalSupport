@@ -65,5 +65,10 @@ RSpec.describe Event, type: :model do
     end
 
   end
+  
+   describe 'search upcoming events by keyword' do
+     if ''
+     
+   end
 
 end

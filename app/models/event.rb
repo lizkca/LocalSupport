@@ -12,4 +12,19 @@ class Event < ActiveRecord::Base
   def all_day_event?
     self.start_date == self.start_date.midnight && self.end_date == self.end_date.midnight
   end
+  
+  def self.search(text)
+    keyword = "%#{text}%"
+    where(contains_description?(keyword).or(contains_title?(keyword)))
+  end
+
+  def self.contains_description?(text)
+    arel_table[:description].matches(text)
+  end
+
+  def self.contains_title?(text)
+    arel_table[:title].matches(text)
+  end
+  
 end
+

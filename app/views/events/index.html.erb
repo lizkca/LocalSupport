@@ -18,7 +18,11 @@
 
 <div id="events_scroll">
     <div class="col-md-12 events-container">
-        <%= render @events %>
+        <% if @events %>
+            <%= render @events %>
+        <% else %>
+            "Sorry no upcoming events at the moment!"
+        <% end %>
     </div>
 </div>
 <%= render partial: 'shared/map_scripts', locals: {markers: @markers} %>

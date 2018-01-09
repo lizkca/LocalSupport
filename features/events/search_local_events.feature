@@ -6,8 +6,8 @@ Feature: Search local events
   Background: Events have been added to the database
     Given the following events exist:
       | title                | description             | start_date      | end_date        |
-      | Young people party   | Good for everyone       | 2 days from now | same day        |
-      | Old people gathering | Look after older people | today           | 6 days from now |
+      | Young people party   | Good for everyone       | 1/01/2018       | 1/01/2018        |
+      | Old people gathering | Look after older people | 8/01/2018       | 20/01/2018 |
 
   Scenario: Find out what's going on locally
     Given I visit the events page
